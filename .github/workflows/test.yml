@@ -8,6 +8,6 @@ on:
       - master
 jobs:
   test:
-    uses: ./check.yml
+    uses: ./.github/workflows/check.yml
     with:
       working_directory: ./test/valid
