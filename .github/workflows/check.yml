@@ -39,7 +39,7 @@ jobs:
       - id: get-module-directories
         uses: bendrucker/find-terraform-modules@v1
         with:
-          working_directory: ${{ inputs.working_directory }}
+          working-directory: ${{ inputs.working_directory }}
     outputs:
       matrix: ${{ steps.get-module-directories.outputs.modules }}
   fmt:
