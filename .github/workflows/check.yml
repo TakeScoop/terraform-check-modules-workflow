@@ -68,6 +68,9 @@ jobs:
           cli_config_credentials_hostname: ${{ inputs.terraform_hostname }}
           cli_config_credentials_token: ${{ secrets.terraform_token }}
       - run: terraform init -backend=false
+      - uses: bendrucker/terraform-configuration-aliases-action@v1
+        with:
+          path: ${{ matrix.module }}
       - run: terraform validate
   lint:
     runs-on: ubuntu-latest
