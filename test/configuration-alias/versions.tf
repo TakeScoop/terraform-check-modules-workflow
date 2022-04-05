@@ -6,7 +6,7 @@ terraform {
       source  = "hashicorp/null"
       version = ">= 1"
 
-      configuration_aliases = [ null.foo ]
+      configuration_aliases = [null.foo]
     }
   }
 }
