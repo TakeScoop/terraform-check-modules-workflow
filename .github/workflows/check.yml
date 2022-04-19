@@ -16,7 +16,7 @@ on:
         description: The Terraform Cloud hostname.
         type: string
         required: false
-        default: terraform.takescoop.com
+        default: app.terraform.io
       tflint_version:
         description: The version of TFLint that will be used.
         type: string
