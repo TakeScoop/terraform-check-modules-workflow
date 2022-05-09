@@ -35,7 +35,7 @@ jobs:
   find-modules:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - id: get-module-directories
         uses: bendrucker/find-terraform-modules@v1
         with:
