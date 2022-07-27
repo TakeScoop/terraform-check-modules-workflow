@@ -23,7 +23,8 @@ on:
         description: The version of TFLint that will be used.
         type: string
         required: false
-        default: latest
+        # TODO: Set to latest after 0.39.0 bug resolution https://github.com/terraform-linters/tflint/issues/1450
+        default: v0.38.1
       tflint_config_version:
         description: The version of TFLint config from https://github.com/takescoop/tflint-config that will be used.
         type: string
