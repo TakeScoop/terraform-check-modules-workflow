@@ -8,12 +8,10 @@ on:
         required: false
         default: ./
       terraform_version:
-        description: The version of Terraform that will be used.
+        description: The version of Terraform that will be used. Can be an exact version or a range.
         type: string
         required: false
-        # Default set to 1.1.8 (our current workspace version) pending a fix to our incompatible Terraform modules in 1.2.0
-        # https://takescoop.atlassian.net/browse/PLATFORM-2435
-        default: 1.1.8
+        default: '1.2'
       terraform_hostname:
         description: The Terraform Cloud hostname.
         type: string
