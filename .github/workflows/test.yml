@@ -7,11 +7,12 @@ on:
     branches:
       - master
 jobs:
-  valid:
+  test:
+    strategy:
+      matrix:
+        fixture:
+          - valid
+          - configuration-alias
     uses: ./.github/workflows/check.yml
     with:
-      working_directory: ./test/valid
-  configuration-alias:
-    uses: ./.github/workflows/check.yml
-    with:
-      working_directory: ./test/configuration-alias
+      working_directory: ./test/${{ matrix.fixture }}
