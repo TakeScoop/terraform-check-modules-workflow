@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: hashicorp/setup-terraform@v2
+      - uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: ${{ inputs.terraform_version }}
       - run: terraform fmt -check -diff -recursive
@@ -63,7 +63,7 @@ jobs:
         working-directory: ${{ matrix.module }}
     steps:
       - uses: actions/checkout@v3
-      - uses: hashicorp/setup-terraform@v2
+      - uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: ${{ inputs.terraform_version }}
           cli_config_credentials_hostname: ${{ inputs.terraform_hostname }}
