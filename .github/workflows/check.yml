@@ -89,7 +89,7 @@ jobs:
           source-repo: TakeScoop/tflint-config
           source-ref: v1
           token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: terraform-linters/setup-tflint@v2
+      - uses: terraform-linters/setup-tflint@v4
         name: Setup TFLint
         with:
           tflint_version: ${{ inputs.tflint_version }}
